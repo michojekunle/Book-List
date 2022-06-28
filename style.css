@@ -100,8 +100,13 @@ td.titles {
     background: blueviolet;
     top: 10px;
     margin: 0;
-    padding: 1.2rem 1rem;
+    margin-left: 0;
+    padding: .8rem 1rem;
     font-size: 1.2rem;
+}
+
+@media screen and (max-width:520px) {
+
 }
 
 
