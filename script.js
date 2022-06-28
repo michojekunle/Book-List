@@ -12,7 +12,17 @@ class Book {
 
 //UI class
 class UI {
-    static 
+    static displayBook() {
+
+    }
+
+    static addBookToList() {
+
+    }
+
+    static removeBook() {
+        
+    }
 }
 
 
