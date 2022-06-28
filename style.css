@@ -4,6 +4,10 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -19,7 +23,7 @@ body {
 }
 
 .add-books h1 {
-    font-size: 44px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: blueviolet;
     text-align: center;
@@ -28,7 +32,7 @@ body {
 
 .add-books label {
     color: coral;
-    font-size: 20px;
+    font-size: 1.2rem;
     padding: 20px 0;
 }
 
@@ -53,6 +57,8 @@ input:focus {
     text-align: center;
     padding: .6rem;
     width: 20%;
+    min-width:120px;
+    font-size: 1.2rem;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -84,12 +90,12 @@ input:focus {
 
 td {
     color: coral;
-    font-size: 18px;   
+    font-size: 1.15rem;   
 }
 
 td.titles { 
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.2rem;
     color: blueviolet;
 }
 
@@ -103,9 +109,9 @@ td.titles {
     margin: 0;
     margin-left: 0;
     padding: .8rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transform: translateY(-150%) scale(.1);
-    animation: alertMessage 10s ease-in-out;
+    /* animation: alertMessage 10s ease-in-out; */
 }
 
 @keyframes alertMessage {
@@ -118,8 +124,10 @@ td.titles {
     }
 }
 
-@media screen and (max-width:520px) {
-
+@media screen and (max-width:768px) {
+    html {
+        font-size: 62.5%;
+    }
 }
 
 
