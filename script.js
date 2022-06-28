@@ -56,9 +56,12 @@ class UI {
 
     static showAlert(message, className) {
         const div = document.createElement('div');
-        div.classname = 'alert alert-${classname}';
+        div.className = 'alert alert-${className}';
         div.appendChild(document.createTextNode(message));
         const container = document.querySelector('.container');
+        const form = document.querySelector('#form-book');
+        container.insertBefore(div, form)
+
     }
 
     static clearFields() {
@@ -97,15 +100,19 @@ document.querySelector('#form-book').addEventListener('submit', (e) => {
     const author  = document.querySelector('#author').value;
     const isbn  = document.querySelector('#ISBN').value;
 
-    // Instantiate book
-    const book = new Book(title, author, isbn);
+    if  (title==='' || author==='' || isbn==='') {
+        UI.showAlert('Please fill in all fields!', 'danger')
+    } else 
+        {
+            // Instantiate book
+            const book = new Book(title, author, isbn);
 
+            //add book to UI
+            UI.addBookToList(book);
 
-    //add book to UI
-    UI.addBookToList(book);
-
-    //clear fields
-    UI.clearFields();
+            //clear fields
+            UI.clearFields();
+        }
 })
 
 //Event: remove Books{
