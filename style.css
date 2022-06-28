@@ -15,6 +15,7 @@ body {
 .container {
     width: 70%;
     max-width: 700px;
+    /* position: relative; */
 }
 
 .add-books h1 {
@@ -89,6 +90,18 @@ td.titles {
     font-weight: bold;
     font-size: 20px;
     color: blueviolet;
+}
+
+.alert {
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    color: coral;
+    background: blueviolet;
+    top: 10px;
+    margin: 0;
+    padding: 1.2rem 1rem;
+    font-size: 1.2rem;
 }
 
 
