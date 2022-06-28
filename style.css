@@ -19,12 +19,13 @@ body {
 
 .add-books h1 {
     font-size: 44px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: blueviolet;
+    text-align: center;
 }
 
 .add-books label {
-    color: blueviolet;
+    color: coral;
     font-size: 20px;
     padding: 20px 0;
 }
@@ -79,15 +80,18 @@ input:focus {
     margin-top: 20px;
 }
 
+td {
+    color: coral;
+    font-size: 18px;   
+}
+
 td.titles { 
     font-weight: bold;
     font-size: 20px;
     color: blueviolet;
 }
 
-td {
-    
-}
+
     
 
 
