@@ -19,7 +19,6 @@ body {
 .container {
     width: 70%;
     max-width: 700px;
-    /* position: relative; */
 }
 
 .add-books h1 {
@@ -122,7 +121,9 @@ td.titles {
     background: red;
 }
 
-
+tbody td:nth-child(even) {
+    background-color: rgb(214, 211, 211);
+}
 
 @media screen and (max-width:768px) {
     html {
