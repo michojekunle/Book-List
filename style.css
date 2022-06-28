@@ -20,6 +20,7 @@ body {
 .add-books h1 {
     font-size: 44px;
     margin-bottom: 30px;
+    color: blueviolet;
 }
 
 .add-books label {
@@ -36,17 +37,34 @@ body {
     font-size: 1.2rem;
     text-align: left;
     outline: none;
+    color: blueviolet;
     border: 2px solid rgb(214, 211, 211);
+    cursor: pointer;
 }
 
 input:focus {
-    border: 2px solid rgb(214, 211, 211);
+    border: 2px solid blueviolet;
 }
 
 #addBook {
     text-align: center;
     padding: .6rem;
+    width: 20%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: blueviolet;
+    color:coral;
+    font-weight: bold;
+    transition: .2s ease-in-out;
+    border: none;
+}
 
+#addBook:hover, #addBook:focus {
+    background: none;
+    border: 2px solid blueviolet;
+    color: blueviolet;
+    padding: .5rem;
 }
 
 .book-list {
@@ -65,6 +83,10 @@ td.titles {
     font-weight: bold;
     font-size: 20px;
     color: blueviolet;
+}
+
+td {
+    
 }
     
 
