@@ -130,9 +130,3 @@ document.querySelector('#books-listed').addEventListener('click', (e) => {
             UI.showAlert('Book Removed', 'success')
 })
 
-// //Event: Remove Book
-// list.addEventListener('click' (e) => {
-//     UI.deleteBook(e.target);
-// });
-
-
