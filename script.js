@@ -73,7 +73,19 @@ class Store {
 //Event: diplay Books
 document.addEventListener('DOMContentLoaded', UI.displayBooks())
 //Event: Add Books 
+document.querySelector('#form-book').addEventListener('submit', (e) => {
+    //prevent default
+    e.preventDefault();
+    //get form values
+    const title  = document.querySelector('#title').value;
+    const author  = document.querySelector('#author').value;
+    const isbn  = document.querySelector('#ISBN').value;
 
+    // Instantiate book
+    const book = new Book(title, author, isbn);
+
+    console.log(book); 
+})
 //Event: remove Books
 
 
