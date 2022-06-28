@@ -56,12 +56,14 @@ class UI {
 
     static showAlert(message, className) {
         const div = document.createElement('div');
-        div.className = className;
+        div.className = `alert ${className}`;
         div.appendChild(document.createTextNode(message));
         const addBooks = document.querySelector('.add-books');
         const form = document.querySelector('#form-book');
         addBooks.insertBefore(div, form);
-        setTimeout()
+        setTimeout(() => {
+            document.querySelector('.alert').remove();
+        }, 3000)
 
     }
 
@@ -111,6 +113,9 @@ document.querySelector('#form-book').addEventListener('submit', (e) => {
             //add book to UI
             UI.addBookToList(book);
 
+            //Show sucees alert
+            UI.showAlert('Book Added', 'success')
+
             //clear fields
             UI.clearFields();
         }
@@ -119,6 +124,10 @@ document.querySelector('#form-book').addEventListener('submit', (e) => {
 //Event: remove Books{
 document.querySelector('#books-listed').addEventListener('click', (e) => {
     UI.deleteBook(e.target)
+
+    
+            //Show success alert
+            UI.showAlert('Book Removed', 'success')
 })
 
 // //Event: Remove Book
