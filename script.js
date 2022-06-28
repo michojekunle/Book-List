@@ -47,17 +47,19 @@ class UI {
         list.appendChild(row);
     }
 
+    
+    static deleteBook(el) {
+        if(el.classList.contains('delete')) {
+            el.parentElement.remove();
+        }
+    }
+
     static clearFields() {
         document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';
         document.querySelector('#ISBN').value = '';
     }
 
-    static deleteBook(el) {
-        if(el.classList.contains('delete')) {
-            el.parentElement.parentElement.remove();
-        }
-    }
 }
 
 
@@ -98,9 +100,10 @@ document.querySelector('#form-book').addEventListener('submit', (e) => {
     //clear fields
     UI.clearFields();
 })
+
 //Event: remove Books{
 document.querySelector('#books-listed').addEventListener('click', (e) => {
-    console.log(e.target);
+    UI.deleteBook(e.target)
 })
 
 // //Event: Remove Book
