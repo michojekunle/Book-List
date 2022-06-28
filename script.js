@@ -61,6 +61,7 @@ class UI {
         const addBooks = document.querySelector('.add-books');
         const form = document.querySelector('#form-book');
         addBooks.insertBefore(div, form);
+        setTimeout()
 
     }
 
