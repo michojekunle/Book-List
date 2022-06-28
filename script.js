@@ -10,7 +10,20 @@ class Book {
     }
 } 
 
-//Store 
+//Store :handles storage
+class Store {
+    static getBooks() {
+        
+    }
+    
+    static addBook() {
+        
+    }
+
+    static removeBook() {
+        
+    }
+}
 
 
 
