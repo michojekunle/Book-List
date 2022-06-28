@@ -12,16 +12,18 @@ class Book {
 
 //UI class
 class UI {
-    static displayBook() {
+    static displayBooks() {
+        const books = Store;
 
+        books.forEach((book) => UI.addBookToList(book));
     }
 
-    static addBookToList() {
-
+    static addBookToList(book) {
+        const list = document.querySelector('#books-listed')
     }
 
     static removeBook() {
-        
+
     }
 }
 
