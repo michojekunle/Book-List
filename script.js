@@ -1,5 +1,4 @@
 const form = document.querySelector('#form-book');
-const list = document.querySelector('#books-listed');
 
 // const removeBookBtn = document.getElementById('');
 
@@ -15,13 +14,28 @@ class Book {
 //UI class: Handle UI class
 class UI {
     static displayBooks() {
-        const books = Store;
+        // const books = Store;
+        const StoredBooks = [
+            {
+                title: 'Book One',
+                author: 'John Doe',
+                isbn: '45468'
+            },
+            {
+                title: 'Book Two',
+                author: 'Jane Doe',
+                isbn: '47665'
+            }
+        ];
+
+        const books = StoredBooks;
 
         books.forEach((book) => UI.addBookToList(book));
     }
 
     static addBookToList(book) {
         const row = document.createElement('tr');
+        const list = document.querySelector('#books-listed');
         
         row.innerHTML = `
         <td>${book.title}</td>
@@ -57,7 +71,7 @@ class Store {
 }
 
 //Event: diplay Books
-
+document.addEventListener('DOMContentLoaded', UI.displayBooks())
 //Event: Add Books 
 
 //Event: remove Books
