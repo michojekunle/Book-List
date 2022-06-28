@@ -97,20 +97,23 @@ td {
 }
 
 
-td.titles { 
+th.titles { 
     font-weight: bold;
     font-size: 1.2rem;
     color: blueviolet;
+    border-bottom: 2px solid coral ;
+    border-top: 2px solid coral ;
+    padding: 10px 0;
+    border-collapse: collapse;
 }
 
 .success, .danger {
     width:100%;
     color: #fff;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    font-weight: 900;
-    padding: 1rem;
-    font-size: 1.2rem;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: .6rem;
     margin-bottom: 30px;
 }
 
@@ -122,8 +125,8 @@ td.titles {
     background: red;
 }
 
-tbody td:nth-child(even) {
-    background-color: rgb(214, 211, 211);
+tbody tr:nth-child(even) {
+    background-color: rgba(214, 211, 211, .6);
 }
 
 @media screen and (max-width:768px) {
