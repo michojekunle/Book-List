@@ -98,8 +98,10 @@ document.querySelector('#form-book').addEventListener('submit', (e) => {
     //clear fields
     UI.clearFields();
 })
-//Event: remove Books
-// document.querySelector('#')
+//Event: remove Books{
+document.querySelector('#books-listed').addEventListener('click', (e) => {
+    console.log(e.target);
+})
 
 // //Event: Remove Book
 // list.addEventListener('click' (e) => {
