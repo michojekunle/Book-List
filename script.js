@@ -54,6 +54,13 @@ class UI {
         }
     }
 
+    static showAlert(message, className) {
+        const div = document.createElement('div');
+        div.classname = 'alert alert-${classname}';
+        div.appendChild(document.createTextNode(message));
+        const container = document.querySelector('.container');
+    }
+
     static clearFields() {
         document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';

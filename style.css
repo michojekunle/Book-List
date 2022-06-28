@@ -103,30 +103,19 @@ td.titles {
     color: blueviolet;
 }
 
-.alert {
-    position: absolute;
-    width: 50%;
-    text-align: center;
-    color: coral;
-    background: blueviolet;
-    top: 10px;
-    margin: 0;
-    margin-left: 0;
-    padding: .8rem 1rem;
-    font-size: 1.5rem;
-    transform: translateY(-150%) scale(.1);
-    /* animation: alertMessage 10s ease-in-out; */
+.success {
+    width:100%;
+    background: green;
+    padding: 1rem;
 }
 
-@keyframes alertMessage {
-    0%, 100% {
-        transform: translateY(-150%) scale(.2);
-    }
-
-    30%, 70% {
-        transform: translateY(70%) scale(1);
-    }
+.danger {
+    width:100%;
+    background: red;
+    padding: 1rem;
 }
+
+
 
 @media screen and (max-width:768px) {
     html {
