@@ -103,16 +103,23 @@ td.titles {
     color: blueviolet;
 }
 
-.success {
+.success, .danger {
     width:100%;
-    background: green;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 900;
     padding: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.success {
+    background: green;
 }
 
 .danger {
-    width:100%;
     background: red;
-    padding: 1rem;
 }
 
 

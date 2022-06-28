@@ -56,11 +56,11 @@ class UI {
 
     static showAlert(message, className) {
         const div = document.createElement('div');
-        div.className = 'alert alert-${className}';
+        div.className = className;
         div.appendChild(document.createTextNode(message));
-        const container = document.querySelector('.container');
+        const addBooks = document.querySelector('.add-books');
         const form = document.querySelector('#form-book');
-        container.insertBefore(div, form)
+        addBooks.insertBefore(div, form);
 
     }
 
