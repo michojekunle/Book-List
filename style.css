@@ -80,17 +80,21 @@ input:focus {
     width:100%;
 }
 
-.books-listed {
+.books-listed{
     width: 100%;
     border: none;
-    border-bottom: 2px solid rgb(214, 211, 211);
     text-align: center;
     margin-top: 20px;
 }
 
+.books-listed thead {
+    border-bottom: 2px solid rgb(214, 211, 211);
+}
+
 td {
     color: coral;
-    font-size: 1.15rem;   
+    font-size: 1.15rem;
+    padding: 8px;   
 }
 
 td.titles { 

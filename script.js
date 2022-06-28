@@ -41,7 +41,7 @@ class UI {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.isbn}</td>
-        <td class="delete" style="background-color:red; color:red; font-size:16px;">$times;</td>
+        <td class="delete" style="background-color:blueviolet; width:40px;  color:#fff; cursor:pointer; font-weight:bolder; font-size:20px;">&times;</td>
         `;
 
         list.appendChild(row);
