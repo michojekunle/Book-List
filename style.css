@@ -23,6 +23,7 @@ body {
     margin-bottom: 20px;
     color: blueviolet;
     text-align: center;
+    margin-top: 70px;
 }
 
 .add-books label {
@@ -103,6 +104,18 @@ td.titles {
     margin-left: 0;
     padding: .8rem 1rem;
     font-size: 1.2rem;
+    transform: translateY(-150%) scale(.1);
+    animation: alertMessage 10s ease-in-out;
+}
+
+@keyframes alertMessage {
+    0%, 100% {
+        transform: translateY(-150%) scale(.2);
+    }
+
+    30%, 70% {
+        transform: translateY(70%) scale(1);
+    }
 }
 
 @media screen and (max-width:520px) {
