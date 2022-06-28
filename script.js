@@ -10,6 +10,10 @@ class Book {
     }
 } 
 
+//Store 
+
+
+
 //UI class
 class UI {
     static displayBooks() {
@@ -19,7 +23,18 @@ class UI {
     }
 
     static addBookToList(book) {
-        const list = document.querySelector('#books-listed')
+        const list = document.querySelector('#books-listed');
+
+        const row = document.createElement('tr');
+        
+        row.innerHTML = `
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.isbn}</td>
+        <td style="background-color:red; color:red; font-size:16px;">$times;</td>
+        `;
+
+        list.appendChild(row);
     }
 
     static removeBook() {
