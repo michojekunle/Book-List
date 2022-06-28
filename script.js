@@ -14,21 +14,8 @@ class Book {
 //UI class: Handle UI class
 class UI {
     static displayBooks() {
-        // const books = Store;
-        const StoredBooks = [
-            {
-                title: 'Book One',
-                author: 'John Doe',
-                isbn: '45468'
-            },
-            {
-                title: 'Book Two',
-                author: 'Jane Doe',
-                isbn: '47665'
-            }
-        ];
-
-        const books = StoredBooks;
+        const books = Store.getBooks();
+       
 
         books.forEach((book) => UI.addBookToList(book));
     }
@@ -132,6 +119,9 @@ document.querySelector('#form-book').addEventListener('submit', (e) => {
             //add book to UI
             UI.addBookToList(book);
 
+            //add Book to store
+            Store.addBook(book);
+
             //Show sucees alert
             UI.showAlert('Book Added', 'success')
 
@@ -144,8 +134,10 @@ document.querySelector('#form-book').addEventListener('submit', (e) => {
 document.querySelector('#books-listed').addEventListener('click', (e) => {
     UI.deleteBook(e.target)
 
-    
-            //Show success alert
-            UI.showAlert('Book Removed', 'success')
+    //remove Book from store
+    Store.removeBook(e.target.previousElementSibling.textContent);    
+
+    //Show success alert
+    UI.showAlert('Book Removed', 'success')
 })
 
